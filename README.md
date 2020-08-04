@@ -1,3 +1,10 @@
+### 참조 유툽
+https://www.youtube.com/watch?v=ZcsCoTPPMD8&t=1113s
+
+### 소스
+https://github.com/gwenf/vue-nwjs-hours-tracking
+
+
 # Hour Tracking App
 
 This app is to help you track your hours and generate invoices for clients as a freelancer or consultant.
