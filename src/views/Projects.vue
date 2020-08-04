@@ -30,16 +30,25 @@ import { mapActions, mapState } from 'vuex';
 
 export default {
   name: 'Projects',
-  data(){
-    return{
-      options:[
-        {label: 'Canada', code: 'ca'} ,
-        {label: 'Canada2', code: 'ca'} 
-      ]
-    }
-  },
+  // data(){
+  //   return{
+  //     options:[
+  //       {label: 'Canada', code: 'ca'} ,
+  //       {label: 'Canada2', code: 'ca'} 
+  //     ]
+  //   }
+  // },
   computed: {
-    ...mapState(['projects'])
+    ...mapState(['projects']),
+    options() {
+      return this.projects.map((option) => {
+        return {
+          ...option,
+          label: (option.description),
+          code: (option.name)
+        }
+      })
+    }
   },
   mounted() {
     this.readProjects()

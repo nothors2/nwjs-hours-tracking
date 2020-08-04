@@ -4,10 +4,10 @@ import PouchDB from 'pouchdb';
 import { v4 as uuidv4 } from 'uuid';
 
 import router from '../router'
-
+// debugger;
+// PouchDB.debug.enable('*'); https://www.npmjs.com/package/pouchdb-debug
 var timeEntriesDB = new PouchDB('timeEntries');
 var projectsDB = new PouchDB('projects');
-// PouchDB.debug.enable('*');
 
 Vue.use(Vuex);
 
@@ -22,7 +22,7 @@ export default new Vuex.Store({
         return entry.doc
       })
     },
-    setProjects(state, paylod) {
+    setProjects(state, payload) {
       state.projects = payload.map((entry) => {
         return entry.doc
       })

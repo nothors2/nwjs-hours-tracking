@@ -34,7 +34,7 @@
                 <input v-model="formData.color" type="color" />
               </b-form-group>
 
-              <b-button type="submit" variant="primary">Submit</b-button>
+              <b-button type="submit" variant="primary" class="mr-2">Submit</b-button>
               <b-button type="reset" variant="danger">Reset</b-button>
             </b-form>
           </b-col>
